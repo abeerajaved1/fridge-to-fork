@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fridge-to-Fork — Order Pad</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="ticket-wrap">
+
+  <header class="stub">
+    <span class="eyebrow">FRIDGE&nbsp;→&nbsp;FORK &nbsp;·&nbsp; ORDER PAD №1</span>
+    <h1>What's in your<br>kitchen right now?</h1>
+    <p class="lede">Write it on the pad. The cook sends back exactly one ticket — a recipe made only from what you've got.</p>
+  </header>
+
+  <form id="order-form" class="pad" autocomplete="off">
+    <label class="line">
+      <span class="line-no">01</span>
+      <span class="line-text">
+        <span class="line-label">Ingredients</span>
+        <input id="ingredients" name="ingredients" type="text" placeholder="eggs, butter, cheese, onion">
+      </span>
+    </label>
+    <label class="line">
+      <span class="line-no">02</span>
+      <span class="line-text">
+        <span class="line-label">Dietary note <em>(optional)</em></span>
+        <input id="preference" name="preference" type="text" placeholder="vegetarian, no dairy, gluten-free...">
+      </span>
+    </label>
+
+    <button type="submit" class="send-btn" id="send-btn">Send to kitchen →</button>
+    <p class="error" id="error-msg" hidden></p>
+  </form>
+
+  <div id="printer" class="printer" hidden>
+    <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+    <span class="printer-text">printing your ticket…</span>
+  </div>
+
+  <div id="receipt-wrap" class="receipt-wrap" hidden>
+    <article class="receipt" id="receipt"></article>
+    <button id="again-btn" class="again-btn">✂️ Tear off another ticket</button>
+  </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
