@@ -1,7 +1,5 @@
 # 🍳 Fridge-to-Fork Recipe Suggester
 
-**Decoding Bits Training Program — Day 2**
-
 Tell it what's in your fridge, get back one recipe you can cook right now — with only the ingredients you actually have. Comes in two flavors:
 
 - **`cli/`** — the terminal program from the assignment spec
@@ -10,7 +8,9 @@ Tell it what's in your fridge, get back one recipe you can cook right now — wi
 Both bonuses are implemented: dietary preference is asked up front, and you can request another recipe without restarting.
 
 ---
+## Live Demo
 
+Try it now: [https://fridge-to-fork-n5oi.onrender.com/](https://fridge-to-fork-n5oi.onrender.com/)
 ## How it works
 
 1. You type your ingredients (and optionally a dietary preference).
